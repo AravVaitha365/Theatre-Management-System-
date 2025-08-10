@@ -1,0 +1,144 @@
+-- Data Insertion
+
+-- Theatre
+insert into Theatre values ('Entertainment Park');
+
+-- Employees
+insert into Employee values
+(1, 'Alice Smith', 'Manager', 50000),
+(2, 'Bob Johnson', 'Cashier', 30000),
+(3, 'Charlie Lee', 'Server', 25000),
+(4, 'Diana Prince', 'Projectionist', 32000),
+(5, 'Edward Stark', 'Technician', 35000),
+(6, 'Fiona White', 'Security', 28000),
+(7, 'George King', 'Cleaner', 20000),
+(8, 'Hannah Bell', 'Server', 24000);
+
+-- Canteen
+insert into Canteen values
+(101, 2, 'Popcorn', 150),
+(102, 3, 'Soda', 80),
+(103, 3, 'Nachos', 120),
+(104, 1, 'Burger', 200),
+(105, 2, 'Pizza Slice', 180),
+(106, 3, 'Hotdog', 130),
+(107, 1, 'Ice Cream', 90),
+(108, 2, 'Candy', 50),
+(109, 3, 'Coffee', 70),
+(110, 1, 'Tea', 60),
+(111, 2, 'Water Bottle', 30),
+(112, 3, 'Chips', 40),
+(113, 1, 'Chocolate Bar', 60);
+(114, 4, 'Cheeseburger', 220),
+(115, 5, 'Lemonade', 90),
+(116, 6, 'Fries', 80);
+
+
+-- Bill_Invoice
+insert into Bill_Invoice values
+(1001, 101, 300, 2),
+(1002, 102, 160, 2),
+(1003, 103, 120, 1);
+
+-- Movies
+insert into Movie values
+(201, 'Entertainment Park', 'Avengers: Endgame', 'Action', 'Superhero film by Marvel Studios', 181, 13, 9.5),
+(202, 'Entertainment Park', 'Coco', 'Animation', 'Animated musical fantasy', 105, 0, 9.0),
+(203, 'Entertainment Park', 'Inception', 'Sci-Fi', 'Dream within a dream thriller', 148, 13, 9.0),
+(204, 'Entertainment Park', 'Titanic', 'Romance', 'Epic romance and disaster film', 195, 13, 8.7),
+(205, 'Entertainment Park', 'Joker', 'Drama', 'Dark psychological thriller', 122, 18, 8.5),
+(206, 'Entertainment Park', 'Frozen', 'Animation', 'Disney animated musical', 102, 0, 8.2),
+(207, 'Entertainment Park', 'The Dark Knight', 'Action', 'Batman faces Joker', 152, 13, 9.1),
+(208, 'Entertainment Park', 'Interstellar', 'Sci-Fi', 'Space and time travel', 169, 10, 8.8),
+(209, 'Entertainment Park', 'The Lion King', 'Animation', 'Disney classic remake', 118, 0, 8.0),
+(210, 'Entertainment Park', 'Parasite', 'Thriller', 'South Korean Oscar winner', 132, 16, 9.0),
+(211, 'Entertainment Park', 'Dune', 'Sci-Fi', 'Desert epic based on novel', 155, 13, 8.4),
+(212, 'Entertainment Park', 'The Godfather', 'Crime', 'Classic mafia film', 175, 18, 9.2);
+(213, 'Entertainment Park', 'The Matrix', 'Sci-Fi', 'Reality is a simulation', 136, 18, 8.7),
+(214, 'Entertainment Park', 'The Shawshank Redemption', 'Drama', 'Prison escape and hope', 142, 18, 9.3);
+
+
+-- Screens
+insert into Screen values
+(1, 201, 'Main Hall'),
+(2, 202, 'Kids Corner'),
+(3, 203, 'Dream Zone'),
+(4, 204, 'Ocean View'),
+(5, 205, 'Midnight Hall');
+
+-- Customers
+insert into customer values
+(501),
+(502),
+(503);
+(504),
+(505);
+
+
+-- Ticket_Window
+insert into Ticket_Window values
+(301, 201, 1, 250.0, '2025-04-13', 501),
+(302, 202, 2, 150.0, '2025-04-13', 502),
+(303, 203, 3, 180.0, '2025-04-13', 501),
+(304, 204, 4, 200.0, '2025-04-13', 502),
+(305, 205, 5, 220.0, '2025-04-13', 503),
+(306, 206, 2, 150.0, '2025-04-13', 501),
+(307, 207, 1, 250.0, '2025-04-13', 502),
+(308, 208, 1, 260.0, '2025-04-13', 503),
+(309, 209, 2, 180.0, '2025-04-13', 501),
+(310, 210, 3, 230.0, '2025-04-13', 502),
+(311, 211, 4, 240.0, '2025-04-13', 503),
+(312, 212, 5, 250.0, '2025-04-13', 501),
+(313, 203, 3, 180.0, '2025-04-14', 502),
+(314, 204, 4, 200.0, '2025-04-14', 503),
+(315, 205, 5, 220.0, '2025-04-14', 501),
+(316, 206, 2, 150.0, '2025-04-14', 502),
+(317, 207, 1, 250.0, '2025-04-14', 503),
+(318, 208, 1, 260.0, '2025-04-14', 501),
+(319, 209, 2, 180.0, '2025-04-14', 502),
+(320, 210, 3, 230.0, '2025-04-14', 503),
+(321, 211, 4, 240.0, '2025-04-14', 501),
+(322, 212, 5, 250.0, '2025-04-14', 502);
+(323, 213, 5, 250.0, '2025-04-15', 504),
+(324, 214, 5, 270.0, '2025-04-15', 505);
+
+-- Seats
+insert into Seats values
+(1, 1, 'Regular', 100, 70),
+(1, 2, 'VIP', 20, 15),
+(2, 3, 'Regular', 80, 60),
+(1, 4, 'Regular', 100, 85),
+(1, 5, 'VIP', 20, 18),
+(1, 6, 'Premium', 30, 28),
+(2, 7, 'Regular', 80, 70),
+(2, 8, 'VIP', 25, 22),
+(2, 9, 'Premium', 40, 39),
+(1, 10, 'Economy', 50, 44),
+(2, 11, 'Economy', 60, 50),
+(1, 12, 'Recliner', 10, 9),
+(2, 13, 'Recliner', 15, 14);
+
+-- Advertisement
+insert into Advertisement values
+(401, 30, 'Coca-Cola', 5000),
+(402, 45, 'Nike', 7000),
+(403, 20, 'Pepsi', 4500),
+(404, 25, 'Apple', 10000),
+(405, 15, 'Samsung', 6000),
+(406, 30, 'Adidas', 5500),
+(407, 40, 'Toyota', 8000),
+(408, 35, 'Netflix', 9000),
+(409, 50, 'Amazon', 12000),
+(410, 20, 'McDonald''s', 5000),
+(411, 45, 'KFC', 7500),
+(412, 60, 'Sony', 11000);
+
+-- Operator Room
+insert into Opearator_Room values
+(401, 1, 'Alice Smith', 1),
+(402, 2, 'Bob Johnson', 2);
+
+-- Cast
+insert into Cast values
+('Anthony Russo', 'Kevin Feige', 'Robert Downey Jr., Chris Evans', 201),
+('Lee Unkrich', 'Darla K. Anderson', 'Anthony Gonzalez, Gael García Bernal', 202);

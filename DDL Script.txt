@@ -1,0 +1,104 @@
+DDL Script
+
+
+create schema Theatre;
+set search_path to theatre;
+
+-- Table Definitions
+CREATE TABLE Theatre(
+    theatre_name VARCHAR(30) PRIMARY KEY
+);
+
+create table Employee(
+    Employee_ID int primary key,
+    Employee_name varchar(30),
+    Designation varchar(30),
+    Salary int
+);
+
+create table Canteen(
+    Product_ID int primary key,
+    Employee_ID int,
+    Product_Name varchar(30),
+    Product_Cost int,
+    foreign key (Employee_ID) references Employee(Employee_ID)
+);
+
+create table Bill_Invoice(
+    Bill_Number int primary key,
+    Product_ID int,
+    TAmount int,
+    Product_Quantity int,
+    foreign key (Product_ID) references Canteen(Product_ID)
+);
+
+create table Movie(
+    Movie_ID int primary key,
+    theatre_name varchar(30),
+    Movie_name varchar(30),
+    Genre varchar(30),
+    Description varchar(200),
+    Duration int,
+    Age_Limit int,
+    Rating decimal,
+    foreign key (theatre_name) references Theatre(theatre_name)
+);
+
+
+
+create table customer(
+    Customer_ID int UNIQUE
+);
+CREATE TABLE Screen(
+    Screen_No int PRIMARY KEY,
+    Movie_ID int,
+    Screen_Name varchar(30),
+    Start_time time,
+    End_time time,
+    FOREIGN KEY (Movie_ID) REFERENCES Movie(Movie_ID)
+);
+
+create table Ticket_Window(
+    Ticket_ID int primary key,
+    Movie_ID int,
+    Screen_No int,
+    Ticket_Amount float,
+    Date Date,
+    Customer_ID int,
+    foreign key (Movie_ID) references Movie(Movie_ID),
+    foreign key (Screen_No) references Screen(Screen_No),
+    foreign key (Customer_ID) references customer(Customer_ID)
+);
+
+create table Seats(
+    Screen_No int,
+    Seat_No int primary key,
+    Seat_Type varchar(30),
+    Total_Seats int,
+    Booked_seats int,
+    foreign key (Screen_No) references Screen(Screen_No)
+);
+
+create table Advertisement(
+    Ad_ID int primary key,
+    Ad_Duration int,
+    Company varchar(30),
+    Cost int
+);
+
+create table Opearator_Room(
+    Ad_ID int,
+    Employee_ID int,
+    Incharge_Name varchar(30),
+    Screen_No int,
+    foreign key (Employee_ID) references Employee(Employee_ID),
+    foreign key (Ad_ID) references Advertisement(Ad_ID)
+);
+
+CREATE TABLE Movie_Cast (
+    Director VARCHAR,
+    Producer VARCHAR,
+    Actors VARCHAR,
+    Movie_ID INT,
+    FOREIGN KEY (Movie_ID) REFERENCES Movie(Movie_ID)
+);
